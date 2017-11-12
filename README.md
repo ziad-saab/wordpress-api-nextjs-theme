@@ -1405,4 +1405,12 @@ TODO
 ---
 
 ## Where to go from here? :eyes:
-TODO
+If you finished this workshop early or want to take it home, here are some things you could work on:
+
+* Add categories and tags to the single post page
+* Add a category listing page
+* Add a single category page
+* Add author pages and link to them
+* Componentize: separate the page components from the rendering logic
+* Add page caching at the ExpressJS level
+* Add a search feature
