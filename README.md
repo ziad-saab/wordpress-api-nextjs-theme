@@ -6,19 +6,19 @@ blogs in existence today, we will not be using PHP to create the theme for our b
 going to manage the front-end with a variety of modern web technologies: JavaScript, React, and some
 NodeJS.
 
-## Why choose this tech stack?
+## Why choose this tech stack? :question:
 It's important to note that this way of doing things is not for everyone. As always, our
 technology choices will have some upsides and some downsides. In the case of choosing React, here
 are, in no particular order, a few pros and cons:
 
-* Pros:
+* :fire: Pros:
     * Extremely rapid feedback during the development cycle
     * The resulting single-page application can have faster loading times and navigation
     * Great ability and ease to add interactive features like infinite scrolling
     * Ability to get going without having to learn PHP
     * Even greater separation between back-end and front-end
     * Ease of managing different development environments without copying WordPress data
-* Cons:
+* :poop: Cons:
     * Some complexity will be introduced by having two different technologies – PHP and JavaScript
     * Having a build process for the front-end complicates things
     * The need to have two hosting environments, one for WordPress and one for our “theme”
@@ -28,7 +28,7 @@ Now that that's out of the way, let's not come back to it and concentrate on the
 
 ---
 
-## Technical requirements
+## Technical requirements :computer:
 In order to successfully complete this workshop, you will need:
 
 * A computer with an internet connection
@@ -39,7 +39,7 @@ In order to successfully complete this workshop, you will need:
 
 ---
 
-## Getting started!
+## Getting started! :rocket:
 
 ### Required software
 To follow along successfully, you will need to install some software on your machine:
@@ -83,7 +83,7 @@ To follow along successfully, you will need to install some software on your mac
   Tools is a browser extension that allows you to introspect your running React application, making
   it easier to debug.
 
-* **What about WordPress??**
+* **What about WordPress??** :question:
 
   You will not need to install a WordPress instance in order to complete the workshop. If you
   already have your WordPress blog with WP-API, you will simply be able to use it. If you do not
@@ -169,7 +169,7 @@ allow you to look at the history of your code and afford you all the benefits Gi
 
 ---
 
-## Adding another page and linking to it
+## Adding another page and linking to it :link:
 Next.js makes it easy to add new pages to your application. All you have to do is create a new file
 under the `pages` directory. The name of the file will be the same as the URL path to access it.
 While this seems limiting – how do we do pretty URLs?? – we will see in a later section that this
@@ -202,7 +202,7 @@ using the History API. This gives you the best of both worlds: SEO and :fire: fa
 
 ---
 
-## First contact: using the WordPress API!
+## First contact: using the WordPress API! :alien:
 In this section, we will use the WordPress API to show a list of recent posts on the `/blog` page.
 The WordPress API is based on the [application/hal+json](http://stateless.co/hal_specification.html).
 This will make it easy for us to grab not only post data, but all sorts of related data like tags,
@@ -1032,7 +1032,7 @@ This concludes the blog listing section. Next, let's make those `/blogpost?slug=
 
 ---
 
-## Adding the single blog post page
+## Adding the single blog post page :page_facing_up:
 This will be very similar to the previous section, so we will go a bit faster. Create a file called
 `blogpost.js` in the `pages` directory, and put the following code in it:
 
@@ -1083,7 +1083,7 @@ Let's fix this in the next section by wrapping each page with a common header an
 
 ---
 
-## Adding a common layout
+## Adding a common layout :house:
 There are many ways to add a common layout to a Next.js application. In our case, we will use a
 simple React higher-order component. That's just a fancy word for saying “component that wraps
 another component”.
@@ -1163,7 +1163,7 @@ do the same with the other two pages and look at the result in your browser.
 
 ---
 
-## How about some SEO?
+## How about some SEO? :mag:
 Let's look back at what we've done so far. Using a minimal amount of code, we were able to get a
 server-rendered, universal React theme for a WordPress blog. This has given us all the benefits of
 modern front-end technologies as well as the benefits of server-rendered SEO: crawler can see our
@@ -1280,15 +1280,15 @@ you like, or invent your own.
 
 ---
 
-## Enabling “pretty links” for the single post page
+## Enabling “pretty links” for the single post page :heart:
 TODO
 
 ---
 
-## Interactive feature: infinite scroll!
+## Interactive feature: infinite scroll! :boom:
 TODO
 
 ---
 
-## Where to go from here?
+## Where to go from here? :eyes:
 TODO
