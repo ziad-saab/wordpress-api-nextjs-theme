@@ -1278,6 +1278,8 @@ Now that you know how styled-jsx works, it's time to personalize your blog! You 
 inspiration from the [twentyseventeen demo](https://2017.wordpress.net/) or any other theme that
 you like, or invent your own.
 
+---
+
 ## Enabling “pretty links” for the single post page
 TODO
 
