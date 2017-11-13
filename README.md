@@ -1400,13 +1400,105 @@ will set the response's status code to 404 to help with our SEO.
 ---
 
 ## Interactive feature: infinite scroll! :boom:
-TODO
+Let's take advantage of the fact that we're using React to easily add an interactive feature:
+infinite scrolling and loading of posts on the `/blog` page.
+
+We will implement this using the [react-waypoint](https://github.com/brigade/react-waypoint)
+component. This component fires a callback function when it becomes visible in the viewport. Let's
+start by installing the package:
+
+```sh
+yarn add react-waypoint
+```
+
+Then, open `pages/blog.js` and make the following changes:
+
+1. Import the component at the top, and add a `PER_PAGE` constant:
+
+   ```js
+   import Waypoint from 'react-waypoint';
+   const PER_PAGE = 10;
+   ```
+
+2. Add an initial state to the `Blog` class:
+
+   ```js
+   class BlogPost extends React.Component {
+     state = {
+       page: 1,
+       loading: false,
+       hasMore: true,
+     }
+   }
+   ```
+
+3. Modify the `wpapi` call in `getInitialProps` to load page 1 with 10 items per page:
+
+   ```js
+   const posts = wpapi.posts().perPage(PER_PAGE).page(1).embed();
+   ```
+
+4. Since this component will become stateful, we will render posts from the state. Add a
+   `componentWillMount` method with the following code. Note that we use “will mount” because it runs
+   on both the client and the server:
+   
+   ```js
+   this.setState({
+     posts: this.props.posts
+   });
+   ```
+
+5. Modify the `render()` method, adding the following before the closing `<div>`:
+
+   ```js
+   {this.state.hasMore && <Waypoint key={this.state.page} onEnter={this.loadMore} />}
+   {this.state.loading && <p>loading...</p>}
+   ```
+
+6. Finally, add the `loadMore` method as an instance method of the class:
+
+   ```js
+   loadMore = async () => {
+     if (this.state.loading || !this.state.hasMore) {
+       return;
+     }
+ 
+     this.setState({ loading: true});
+     const posts = await wpapi.posts().perPage(PER_PAGE).page(this.state.page + 1).embed();
+     if (posts.length > 0) {
+       this.setState({
+         posts: this.state.posts.concat(posts),
+         page: this.state.page + 1
+       });
+     }
+     else {
+       this.setState({ hasMore: false });
+     }
+     this.setState({
+       loading: false
+     });
+   }
+   ```
+
+This function will be called by react-waypoint when the bottom of the page is reached. The logic is
+quite straightforward: we load the next page of posts, and concat the result to the end of the posts
+array in our state.
+
+That's it! Load the `/blog` page in your browser and start scrolling.
+
+:warning: **NOTE**: While this is a simple way to implement infinite scrolling, it has one major
+pitfall: if you scroll too much, the DOM will become overloaded with too much content that is not
+being displayed. This can be wasteful. Some infinite loaders try to mitigate this by replacing the
+elements that are out of view with one single empty div with a fixed CSS height. This is more
+complex because it requires knowing the height of each element in advance, but it is certainly
+doable. It is beyond the scope of this workshop.
 
 ---
 
 ## Where to go from here? :eyes:
 If you finished this workshop early or want to take it home, here are some things you could work on:
 
+* Add error handling.
 * Add categories and tags to the single post page
 * Add a category listing page
 * Add a single category page
