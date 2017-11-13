@@ -26,6 +26,10 @@ are, in no particular order, a few pros and cons:
 
 Now that that's out of the way, let's not come back to it and concentrate on the task at hand.
 
+<p align="center">
+   <img src="https://media0.giphy.com/media/l4EoT59vRYdTSi6vS/giphy.gif">
+</p>
+
 ---
 
 ## Technical requirements :computer:
@@ -166,6 +170,10 @@ Then, run `git init`, `git add .` and `git commit` to seal your work inside the 
 :warning: **NOTE**: from now on, the workshop instructions will not mention Git anymore. It's up to
 you if you want to use it to have a clean commit for each step of the workshop. If you do, it will
 allow you to look at the history of your code and afford you all the benefits Git has to offer. 
+
+<p align="center">
+   <img src="https://media.giphy.com/media/3ov9jJGk03x9MaxHB6/giphy.gif">
+</p>
 
 ---
 
@@ -329,6 +337,12 @@ is an example of requesting a single blog post without `_embed`:
     }
 }
 ```
+
+<p align="center">
+   <img src="https://media1.giphy.com/media/xT4uQqlFbaPRQkhiQE/giphy.gif">
+   <br>
+   Get it? JASON 🤣
+</p>
 
 Notice that fields like author, categories, and tags appear as numbers, IDs of their respective
 types. The `_links` section contains HTTP links to those resources. Here is the same request with
@@ -1030,6 +1044,10 @@ with the addition of the Cors Anywhere proxy.
 
 This concludes the blog listing section. Next, let's make those `/blogpost?slug=...` links work!
 
+<p align="center">
+   <img src="https://media2.giphy.com/media/l2Je9zHYveK012EVi/giphy.gif">
+</p>
+
 ---
 
 ## Adding the single blog post page :page_facing_up:
@@ -1080,6 +1098,10 @@ extract the slug, and pass it to the `.slug()` method of `wpapi`. In `render()`,
 
 Now that we have a few pages going, you can see that we don't have a common layout between pages.
 Let's fix this in the next section by wrapping each page with a common header and footer.
+
+<p align="center">
+   <img src="https://media1.giphy.com/media/zcCGBRQshGdt6/giphy.gif">
+</p>
 
 ---
 
@@ -1202,6 +1224,10 @@ plugin on the WordPress side, you will be able to access Yoast meta directly fro
 
 Then, you can add whatever fields you need under the `<Head>` tag in your React page component.
 
+<p align="center">
+   <img src="https://media3.giphy.com/media/5fkzHxGP920Ra/giphy.gif">
+</p>
+
 ---
 
 ## My blog looks like :poop:
@@ -1277,6 +1303,10 @@ Follow the link to learn more about how this is done.
 Now that you know how styled-jsx works, it's time to personalize your blog! You could take some
 inspiration from the [twentyseventeen demo](https://2017.wordpress.net/) or any other theme that
 you like, or invent your own.
+
+<p align="center">
+   <img src="https://media1.giphy.com/media/uELtzAhhqpRKg/giphy.gif">
+</p>
 
 ---
 
@@ -1360,6 +1390,10 @@ Open `pages/blog.js` and change the `<Link>` to the following:
 The `as` prop will make Next.js output the pretty link, but internally Next will use the `href`
 prop to execute the dynamic inter-page navigation. That's all there is to it :)
 
+<p align="center">
+   <img src="https://media1.giphy.com/media/I5jjv1kptuazu/giphy.gif">
+</p>
+
 ### 404: Dealing with posts that don't exist
 With this route setup, any URL of the form `/blog/something` will go to our `blogpost.js` page
 component. On the server side, this will always return an HTTP 200 status code, even for posts that
@@ -1396,6 +1430,10 @@ class BlogPost extends React.Component {
 Basically, if the WordPress API returns no post for the slug we need, then we will return an error
 page. In addition to this, if we are running the code on the server – the `if (res)` bit – then we
 will set the response's status code to 404 to help with our SEO.
+
+<p align="center">
+   <img src="https://media1.giphy.com/media/10oRQhnkcc72Le/giphy.gif">
+</p>
 
 ---
 
@@ -1493,6 +1531,10 @@ elements that are out of view with one single empty div with a fixed CSS height.
 complex because it requires knowing the height of each element in advance, but it is certainly
 doable. It is beyond the scope of this workshop.
 
+<p align="center">
+   <img src="https://media.giphy.com/media/oKnaQwRZ2EdOM/giphy.gif">
+</p>
+
 ---
 
 ## Where to go from here? :eyes:
@@ -1506,3 +1548,9 @@ If you finished this workshop early or want to take it home, here are some thing
 * Componentize: separate the page components from the rendering logic
 * Add page caching at the ExpressJS level
 * Add a search feature
+
+If you can imagine it, you can do it!
+
+<p align="center">
+   <img src="https://media2.giphy.com/media/klG0l9x2miZjy/giphy.gif">
+</p>
