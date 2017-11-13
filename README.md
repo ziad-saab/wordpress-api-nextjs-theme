@@ -1045,7 +1045,7 @@ with the addition of the Cors Anywhere proxy.
 This concludes the blog listing section. Next, let's make those `/blogpost?slug=...` links work!
 
 <p align="center">
-   <img src="https://media2.giphy.com/media/l2Je9zHYveK012EVi/giphy.gif">
+   <img src="https://media1.giphy.com/media/3o6MbhdrQxaTJxhOiQ/giphy.gif">
 </p>
 
 ---
