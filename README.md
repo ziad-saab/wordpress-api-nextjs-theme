@@ -1553,7 +1553,9 @@ Then, open `pages/blog.js` and make the following changes:
 
 This function will be called by react-waypoint when the bottom of the page is reached. The logic is
 quite straightforward: we load the next page of posts, and concat the result to the end of the posts
-array in our state.
+array in our state. If there are no more posts, setting `hasMore` to `false` will completely remove
+the `<WayPoint>` element from the `render()` method, thereby preventing calling the callback for
+nothing.
 
 That's it! Load the `/blog` page in your browser and start scrolling.
 
