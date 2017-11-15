@@ -1490,7 +1490,7 @@ Then, open `pages/blog.js` and make the following changes:
 3. Modify the `wpapi` call in `getInitialProps` to load page 1 with 10 items per page:
 
    ```js
-   const posts = wpapi.posts().perPage(PER_PAGE).page(1).embed();
+   const posts = api.posts().perPage(PER_PAGE).page(1).embed();
    ```
 
 4. Since this component will become stateful, we will render posts from the state. Add a
@@ -1535,7 +1535,7 @@ Then, open `pages/blog.js` and make the following changes:
      }
  
      this.setState({ loading: true});
-     const posts = await wpapi.posts().perPage(PER_PAGE).page(this.state.page + 1).embed();
+     const posts = await api.posts().perPage(PER_PAGE).page(this.state.page + 1).embed();
      if (posts.length > 0) {
        this.setState({
          posts: this.state.posts.concat(posts),
