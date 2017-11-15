@@ -1180,6 +1180,8 @@ import withLayout from '../components/withLayout';
 export default withLayout(HomePage);
 ```
 
+:warning: **NOTE**: You might have to restart your Next.js server after adding the layout.
+
 That's it. The component's code stays the same, but we export a wrapped version of it instead. Now,
 do the same with the other two pages and look at the result in your browser.
 
