@@ -1321,6 +1321,18 @@ Next.js with the basic command-line like we have been doing, we do not have much
 Each file in the `pages` directory corresponds to a page URL. However, Next.js provides a NodeJS
 request handler that lets us extend it at will. Let's do it!
 
+To be clear, what we will do in this section is change the single blog post links from:
+
+```
+/blogpost?slug=super-cool-post
+```
+
+to:
+
+```
+/blog/super-cool-post
+```
+
 For this section, we will be installing the ExpressJS web server. Then, we will create a server
 module that will import Next.js' request handler. We will then spin up our own ExpressJS web server,
 something that Next normally does for us. In there, we will define a custom route with a path
