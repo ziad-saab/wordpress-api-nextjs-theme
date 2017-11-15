@@ -33,6 +33,9 @@ Now that that's out of the way, let's not come back to it and concentrate on the
 ---
 
 ## Technical requirements :computer:
+
+<img align="left" height="200" src="https://media0.giphy.com/media/wiAp4dCDPfm7u/giphy.gif">
+
 In order to successfully complete this workshop, you will need:
 
 * A computer with an internet connection
@@ -40,6 +43,20 @@ In order to successfully complete this workshop, you will need:
 * Some familiarity with modern JavaScript, React and NodeJS
 * Some familiarity with the command line interface of your machine
 * Familiarity with Git is optional, but you should use it to track your progress!
+
+---
+
+## Thanks
+Before moving forward with the workshop, I'd like to express my thanks to the people who
+helped make this possible:
+
+- [Nathaniel Kitzke](https://github.com/nk1tz): for TAing and fixing a thousand typos
+- [Timothy Mulqueen](https://github.com/multimo): for TAing and fixing some glaring mistakes
+- [Paule Lepage](https://github.com/nyanofthemoon): for TAing and moral support
+
+<p align="center">
+   <img src="https://media2.giphy.com/media/osjgQPWRx3cac/giphy.gif">
+</p>
 
 ---
 
@@ -96,6 +113,10 @@ To follow along successfully, you will need to install some software on your mac
   
   One of the great things about the setup we will have is that you will easily be able to change
   which WordPress blog it is associated to by simply changing one line in your JavaScript code.
+  
+<p align="center">
+   <img src="https://media2.giphy.com/media/yhcqymRLlv7K8/giphy.gif">
+</p>
 
 ### Initial setup
 Now that you have installed all the necessary software on your machine, you are ready to start! In
