@@ -1410,7 +1410,7 @@ Open `pages/blogpost.js` and make the following changes:
 class BlogPost extends React.Component {
   // Change getInitialProps to the following
   static async getInitialProps({ query: { slug }, res }) {
-    const post = (await wpapi.posts().slug(slug).embed())[0];
+    const post = (await api.posts().slug(slug).embed())[0];
     if (post) {
       return { post };
     }
