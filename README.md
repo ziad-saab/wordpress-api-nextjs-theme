@@ -1263,7 +1263,7 @@ component. Open `components/withLayout.js` and make the following changes:
 
 If this were regular CSS, we would probably not target `header` only. It is a bit too generic. With
 styled-jsx however, things are different. Navigate to your site and use your browser's element
-inspector. You will notice that each element that is part of `WithLayour` has had a seemingly
+inspector. You will notice that each element that is part of `WithLayout` has had a seemingly
 random class name added to it, and all the styles you wrote inside `<style jsx>` have had this same
 class name appended to them, effectively scoping the CSS to this component:
 
