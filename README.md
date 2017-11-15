@@ -1503,12 +1503,28 @@ Then, open `pages/blog.js` and make the following changes:
    });
    ```
 
-5. Modify the `render()` method, adding the following before the closing `<div>`:
+5. Modify the `render()` method:
 
-   ```js
-   {this.state.hasMore && <Waypoint key={this.state.page} onEnter={this.loadMore} />}
-   {this.state.loading && <p>loading...</p>}
-   ```
+   1. Change the line that reads:
+  
+      ```js
+      const { posts } = this.props;
+      ```
+  
+      to:
+  
+      ```js
+      const { posts } = this.state;
+      ```
+  
+      Otherwise, all the work you did so far will be for nothing, since posts will still be rendered from the initial props!
+
+   2. Add the following before the closing `<div>`:
+
+       ```js
+       {this.state.hasMore && <Waypoint key={this.state.page} onEnter={this.loadMore} />}
+       {this.state.loading && <p>loading...</p>}
+       ```
 
 6. Finally, add the `loadMore` method as an instance method of the class:
 
