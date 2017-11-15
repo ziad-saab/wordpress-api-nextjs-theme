@@ -46,7 +46,7 @@ In order to successfully complete this workshop, you will need:
 
 ---
 
-## Thanks
+## Thanks :two_hearts:
 Before moving forward with the workshop, I'd like to express my thanks to the people who
 helped make this possible:
 
