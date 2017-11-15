@@ -194,7 +194,7 @@ Then, re-open `pages/index.js` and make the following changes:
 import Link from 'next/link';
 
 // Add this line inside the <div>, below the <h1>
-<Link href="/blog">Go to the recent posts</Link>
+<Link href="/blog"><a>Go to the recent posts</a></Link>
 ```
 
 Then, go back to your browser. Did you notice that the changes appear right away, without having to
@@ -207,6 +207,9 @@ If you look at the source code of the `/` page, you will see that the server has
 in place of the `<Link>`. This is great for SEO purposes. However, using the `<Link>` component
 makes this link dynamic. In the browser, Next.js prevents the default action and handles navigation
 using the History API. This gives you the best of both worlds: SEO and :fire: fast navigation.
+
+:warning: **NOTE**: It might look weird to have an `<a>` *inside* the `<Link>` but this is how Next
+wants you to do it.
 
 ---
 
