@@ -1061,7 +1061,7 @@ import api from '../api';
 
 class BlogPost extends React.Component {
   static async getInitialProps({ query: { slug } }) {
-    const post = await wpapi.posts().slug(slug).embed();
+    const post = await api.posts().slug(slug).embed();
     return { post: post[0] };
   }
 
@@ -1087,7 +1087,7 @@ class BlogPost extends React.Component {
   }
 }
 
-export default Blog;
+export default BlogPost;
 ```
 
 The main differences are the use of the `query` parameter inside `getInitialProps`. This is one of
