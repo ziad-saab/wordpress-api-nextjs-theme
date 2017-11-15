@@ -230,6 +230,10 @@ using the History API. This gives you the best of both worlds: SEO and :fire: fa
 :warning: **NOTE**: It might look weird to have an `<a>` *inside* the `<Link>` but this is how Next
 wants you to do it.
 
+<p align="center">
+   <img src="https://media0.giphy.com/media/YWUpVw86AtIbe/giphy.gif">
+</p>
+
 ---
 
 ## First contact: using the WordPress API! :alien:
