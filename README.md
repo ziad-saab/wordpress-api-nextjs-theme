@@ -140,12 +140,10 @@ the benefits of an initial server rendering – SEO and faster loading.
 Once this is done, open WebStorm and create a new project based on the directory you just setup.
 Then, open the `package.json` file and add the following section at the root:
 
-```json
-{
+```
   "scripts": {
     "start": "next"
   }
-}
 ```
 
 Then, create a directory called `pages` at the root of your project. In it, create a file called
