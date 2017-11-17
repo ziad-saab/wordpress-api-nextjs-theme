@@ -1513,7 +1513,7 @@ Then, open `pages/blog.js` and make the following changes:
 3. Modify the `wpapi` call in `getInitialProps` to load page 1 with 10 items per page:
 
    ```js
-   const posts = api.posts().perPage(PER_PAGE).page(1).embed();
+   const posts = await api.posts().perPage(PER_PAGE).page(1).embed();
    ```
 
 4. Since this component will become stateful, we will render posts from the state. Add a
